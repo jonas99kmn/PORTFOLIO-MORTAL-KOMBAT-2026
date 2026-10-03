@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing Page e Portfólio de Jonas Alves - Desenvolvedor Web Front-End. Interfaces modernas, animações em Canvas e tema Mortal Kombat 2026.">
+    <meta name="keywords" content="Desenvolvedor Front-End, Jonas Alves, Landing Page, Mortal Kombat, Web Developer, HTML, CSS, JavaScript, Canvas">
+    <meta name="author" content="Jonas Alves">
+
+    <title>Jonas Alves | Front-End Developer // Mortal Kombat Edition</title>
+
+    <!-- Folha de Estilos -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <!-- =====================================================
+         FUNDO VISUAL: ESTRELAS E AMBIENTAÇÃO DE LUZES
+    ====================================================== -->
+    <div class="background-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+    <div class="ambient-lights"></div>
+
+
+    <!-- =====================================================
+         CABEÇALHO / NAVBAR FIXA
+    ====================================================== -->
+    <header class="cabecalho">
+
+        <a href="#top" class="cabecalho__brand">
+            <div class="brand-emblem">
+                <img src="./mortalk/simbolo dragao.jpeg" alt="Símbolo do Dragão Mortal Kombat">
+            </div>
+            <div class="brand-title">
+                JONAS<span>.DEV</span>
+            </div>
+        </a>
+
+        <nav class="cabecalho__nav">
+            <ul class="cabecalho__menu">
+                <li><a class="cabecalho__menu__link active" href="#home">Home</a></li>
+                <li><a class="cabecalho__menu__link" href="#stats">Estatísticas</a></li>
+                <li><a class="cabecalho__menu__link" href="#sobre">Sobre Mim</a></li>
+                <li><a class="cabecalho__menu__link" href="#skills">Arsenal</a></li>
+                <li><a class="cabecalho__menu__link" href="#kombatentes">Kombatentes</a></li>
+                <li><a class="cabecalho__menu__link" href="#projetos">Projetos</a></li>
+                <li><a class="cabecalho__menu__link" href="#contato">Contato</a></li>
+            </ul>
+
+            <div class="cabecalho__actions">
+                <button class="btn-audio-toggle" type="button" aria-label="Alternar Efeitos Sonoros">
+                    <span>⚡</span> SFX ON
+                </button>
+
+                <button class="btn-mobile-toggle" type="button" aria-label="Abrir Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+    <main>
+
+        <!-- =================================================
+             1. HERO SECTION (APRESENTAÇÃO + BORDA ELÉTRICA)
+        ================================================== -->
+        <section class="hero-section" id="home">
+            <div class="hero-grid">
+
+                <!-- CONTEÚDO TEXTUAL -->
+                <div class="hero-content">
+
+                    <div class="hero-badge-container">
+                        <div class="hero-badge">
+                            <span class="pulse-dot"></span>
+                            TEMPORADA 2026 // FRONT-END WARRIOR
+                        </div>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Eleve seu negócio digital a outro nível
+                        <span class="titulo-destaque">
+                            com um Front-end de qualidade!
+                        </span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Desenvolvedor Web especialista em criar interfaces dinâmicas, responsivas, velozes e com alta fidelidade visual. Unindo técnica apurada, animações fluídas e uma estética marcante para transformar visitantes em clientes fiéis.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#contato" class="btn-primary">
+                            <span>⚔️</span> Iniciar Desafio
+                        </a>
+                        <a href="#projetos" class="btn-secondary">
+                            <span>🛡️</span> Ver Projetos
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span class="hero-socials-title">Acesse minhas redes oficiais:</span>
+                        <div class="hero-socials-links">
+                            <a class="social-pill" href="https://github.com/jonas99kmn" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/github-32.png" alt="GitHub">
+                                GitHub
+                            </a>
+
+                            <a class="social-pill" href="https://www.linkedin.com/in/jonas-desenvolvedor-web-front-end/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/linkedin-30.png" alt="LinkedIn">
+                                LinkedIn
+                            </a>
+
+                            <a class="social-pill" href="https://www.instagram.com/jonasdesenvolvedorfrontend/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/instagram-30.png" alt="Instagram">
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CARD 3D INTERATIVO COM BORDA ELÉTRICA -->
+                <div class="hero-visual">
+                    <div class="electric-border">
+
+                        <!-- CANVAS DA BORDA ELÉTRICA COM PROCEDURAL NOISE -->
+                        <div class="eb-canvas-container">
+                            <canvas class="eb-canvas"></canvas>
+                        </div>
+
+                        <!-- CAMADAS DE BRILHO NEON -->
+                        <div class="eb-layers">
+                            <div class="eb-glow-1"></div>
+                            <div class="eb-glow-2"></div>
+                            <div class="eb-background-glow"></div>
+                        </div>
+
+                        <!-- CONTEÚDO DO CARD FLIP -->
+                        <div class="eb-content">
+                            <div class="box" title="Toque ou passe o mouse para virar">
+                                <div class="box__content">
+
+                                    <!-- FRENTE: FOTO DO JONAS -->
+                                    <div class="box__front">
+                                        <img class="imagem__js" src="./assets/jonas-img2b.jpg" alt="Foto de Jonas Alves - Front-End Developer">
+                                        <div class="card-overlay"></div>
+                                        <div class="card-badge">FRONT-END DEV</div>
+                                        <h2 class="tex_animação"></h2>
+                                        <span class="card-hint">Passe o mouse ou toque ↺</span>
+                                    </div>
+
+                                    <!-- VERSO: SCORPION KOMBAT -->
+                                    <div class="box__back">
+                                        <img class="imagem__sc" src="./assets/scorpion2_ (1).jpg" alt="Scorpion - Mortal Kombat">
+                                        <div class="card-overlay"></div>
+                                        <div class="card-badge" style="color: var(--cor-mk-gold); border-color: rgba(255, 184, 0, 0.4);">SCORPION MODE</div>
+                                        <h2 class="tex_back" style="color: var(--cor-mk-gold);">GET OVER HERE!</h2>
+                                        <span class="card-hint">Flawless Execution ⚡</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             2. KOMBAT STATS // ESTATÍSTICAS DE COMBATE
+        ================================================== -->
+        <section class="stats-section" id="stats">
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Flawless Dedication</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <span class="stat-number">+3 ANOS</span>
+                        <span class="stat-label">Evolução Front-End</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🛡️</div>
+                    <div class="stat-info">
+                        <span class="stat-number">60 FPS</span>
+                        <span class="stat-label">Performance & Fluidez</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⚔️</div>
+                    <div class="stat-info">
+                        <span class="stat-number">MK 2026</span>
+                        <span class="stat-label">Edição Exclusiva</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             3. SOBRE MIM // HISTÓRIA DO GUERREIRO
+        ================================================== -->
+        <section class="section-container" id="sobre">
+            <div class="section-header">
+                <span class="section-badge">Trajetória & Filosofia</span>
+                <h2 class="section-title">História do <span>Guerreiro</span></h2>
+                <p class="section-description">
+                    Conheça a mente e a paixão que constroem experiências digitais lendárias na Web.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text-content">
+                    <p class="about-paragraph">
+                        Atualmente moro em <strong>Senhor do Bonfim, na Bahia</strong>, e venho aprimorando continuamente meus conhecimentos no universo dinâmico do desenvolvimento <strong>Front-End</strong>.
+                    </p>
+
+                    <p class="about-paragraph">
+                        Tenho sólido domínio em <strong>HTML5 Semântico, CSS3 Moderno e JavaScript ES6+</strong>, sempre priorizando a criação de interfaces responsivas, acessíveis, otimizadas para motores de busca e com design contemporâneo.
+                    </p>
+
+                    <p class="about-paragraph">
+                        Além da tecnologia, sou profundamente apaixonado pelo universo dos games — especialmente clássicos de combate como <strong>Mortal Kombat</strong>. Essa afinidade estética inspira minha abordagem no código: animações fluidas, efeitos visuais marcantes, precisão cirúrgica e atenção máxima a cada detalhe da experiência do usuário.
+                    </p>
+
+                    <!-- CONTROLE DE ÁUDIO TEMÁTICO INTEGRADO -->
+                    <div class="about-audio-card">
+                        <div class="audio-header">
+                            <div class="audio-title">
+                                <span>🎙️</span> Efeito de Batalha: Shao Kahn Theme
+                            </div>
+                        </div>
+
+                        <div class="audio-controls-custom">
+                            <button class="btn-play-sfx" id="btnPlaySfx" type="button" title="Tocar Som do Shao Kahn">
+                                ▶️
+                            </button>
+                            <div class="audio-sound-wave">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">
+                                Clique para invocar a voz da arena!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual-card">
+                    <img class="bg-scenery" src="./mortalk/castelo.jpeg" alt="Cenário do Castelo Mortal Kombat">
+                    
+                    <div class="about-card-badge">
+                        <div class="dragon-logo-mini">
+                            <img src="./mortalk/simbolo dragao.jpeg" alt="Dragão MK">
+                        </div>
+                        <div class="about-badge-text">
+                            <h4>Arena Outworld</h4>
+                            <p>Onde o código encontra a criatividade sem limites.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             4. ARSENAL DE HABILIDADES // SKILLS MATRIX
+        ================================================== -->
+        <section class="section-container" id="skills">
+            <div class="section-header">
+                <span class="section-badge">Poder Técnico</span>
+                <h2 class="section-title">Arsenal de <span>Habilidades</span></h2>
+                <p class="section-description">
+                    Tecnologias e metodologias dominadas para construir produtos web de impacto.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">🌐</div>
+                        <span class="skill-level-badge">NÍVEL ALTO</span>
+                    </div>
+                    <h3 class="skill-title">HTML5 Semântico</h3>
+                    <p class="skill-desc">Estruturação semântica, foco rigoroso em SEO técnico, boas práticas de acessibilidade (a11y) e marcação limpa.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">🎨</div>
+                        <span class="skill-level-badge">NÍVEL ALTO</span>
+                    </div>
+                    <h3 class="skill-title">CSS3 & Design Moderno</h3>
+                    <p class="skill-desc">Flexbox, CSS Grid, Glassmorphism, variáveis customizadas, transições fluidas e layouts responsivos para qualquer tela.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 96%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">⚡</div>
+                        <span class="skill-level-badge">NÍVEL ALTO</span>
+                    </div>
+                    <h3 class="skill-title">JavaScript ES6+</h3>
+                    <p class="skill-desc">Manipulação avançada de DOM, funções assíncronas, eventos complexos, POO e lógica robusta sem dependências excessivas.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 92%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">🌀</div>
+                        <span class="skill-level-badge">EXPERIENTE</span>
+                    </div>
+                    <h3 class="skill-title">Canvas 2D & Animações</h3>
+                    <p class="skill-desc">Renderização procedural, efeitos elétricos matemáticos com ruído 2D, partículas e animações a 60 FPS.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 88%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">⚛️</div>
+                        <span class="skill-level-badge">EVOLUÇÃO CONSTANTE</span>
+                    </div>
+                    <h3 class="skill-title">React & Componentes</h3>
+                    <p class="skill-desc">Criação de componentes reutilizáveis, gerenciamento de estado e arquitetura modular para aplicações escaláveis.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">📱</div>
+                        <span class="skill-level-badge">NÍVEL ALTO</span>
+                    </div>
+                    <h3 class="skill-title">Mobile-First & UI/UX</h3>
+                    <p class="skill-desc">Interfaces pensadas primeiro para telas móveis, garantindo ergonomia, facilidade de uso e fidelidade estética em desktops.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 94%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">📦</div>
+                        <span class="skill-level-badge">NÍVEL ALTO</span>
+                    </div>
+                    <h3 class="skill-title">Git & Versionamento</h3>
+                    <p class="skill-desc">Controle de versão com Git, gerenciamento de branches, colaboração no GitHub e fluxo de deploy contínuo.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon-header">
+                        <div class="skill-icon">🚀</div>
+                        <span class="skill-level-badge">NÍVEL ALTO</span>
+                    </div>
+                    <h3 class="skill-title">Performance Web</h3>
+                    <p class="skill-desc">Otimização de imagens, carregamento rápido, redução de layout shifts e cumprimento dos padrões Core Web Vitals.</p>
+                    <div class="skill-power-bar">
+                        <div class="skill-power-fill" style="width: 89%;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             5. ESCOLHA SEU KOMBATENTE // ROSTER INTERATIVO
+        ================================================== -->
+        <section class="section-container" id="kombatentes">
+            <div class="section-header">
+                <span class="section-badge">Seleção de Lutadores</span>
+                <h2 class="section-title">Escolha seu <span>Kombatente</span></h2>
+                <p class="section-description">
+                    Cada guerreiro representa um dos pilares de maestria no desenvolvimento front-end. Clique no card para interagir!
+                </p>
+            </div>
+
+            <div class="roster-grid">
+
+                <!-- CARD SCORPION -->
+                <article class="roster-card" data-fighter="scorpion" title="Clique para ouvir o som do Scorpion!">
+                    <div class="roster-card-bg">
+                        <img class="roster-gif" src="./mortalk/scorpionkk.gif" alt="Scorpion de Mortal Kombat em pose de combate">
+                    </div>
+                    <div class="roster-overlay"></div>
+                    <div class="roster-info">
+                        <span class="roster-role-badge">Impacto & Efeitos</span>
+                        <h3 class="roster-fighter-name">SCORPION <span>// FOGO</span></h3>
+                        <p class="roster-specialty">
+                            Domínio do impacto visual imediato: animações arrojadas, transições CSS precisas e efeitos elétricos que prendem a atenção do usuário no primeiro instante.
+                        </p>
+                        <button class="roster-action-btn" type="button">
+                            ⚡ FATALITY: ATTRACT
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD SUB-ZERO -->
+                <article class="roster-card" data-fighter="subzero" title="Clique para interagir com o Sub-Zero!">
+                    <div class="roster-card-bg">
+                        <img class="roster-gif" src="./mortalk/sub-zero.gif" alt="Sub-Zero de Mortal Kombat desferindo golpe congelante">
+                    </div>
+                    <div class="roster-overlay"></div>
+                    <div class="roster-info">
+                        <span class="roster-role-badge">Arquitetura & Estrutura</span>
+                        <h3 class="roster-fighter-name">SUB-ZERO <span>// GELO</span></h3>
+                        <p class="roster-specialty">
+                            Código sólido e imutável como o gelo: arquitetura de componentes limpa, semântica à prova de falhas, modularidade e padrões de projeto consolidados.
+                        </p>
+                        <button class="roster-action-btn" type="button">
+                            ❄️ ICE SHIELD: STABILITY
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD KUNG LAO -->
+                <article class="roster-card" data-fighter="kunglao" title="Clique para interagir com o Kung Lao!">
+                    <div class="roster-card-bg">
+                        <img class="roster-gif" src="./mortalk/kung lao.gif" alt="Kung Lao de Mortal Kombat girando com lâminas afiadas">
+                    </div>
+                    <div class="roster-overlay"></div>
+                    <div class="roster-info">
+                        <span class="roster-role-badge">Velocidade & Precisão</span>
+                        <h3 class="roster-fighter-name">KUNG LAO <span>// LÂMINA</span></h3>
+                        <p class="roster-specialty">
+                            Cortes cirúrgicos nos milissegundos de carregamento: otimização máxima de assets, performance de renderização suave e velocidade relâmpago.
+                        </p>
+                        <button class="roster-action-btn" type="button">
+                            🌀 SPIN BLADE: SPEED
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             6. PROJETOS EM DESTAQUE // ARENAS
+        ================================================== -->
+        <section class="section-container" id="projetos">
+            <div class="section-header">
+                <span class="section-badge">Portfólio em Ação</span>
+                <h2 class="section-title">Arenas de <span>Projetos</span></h2>
+                <p class="section-description">
+                    Uma amostra de criações digitais que combinam estética envolvente com engenharia front-end.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- PROJETO 1 -->
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="./mortalk/ponte.gif" alt="The Pit - Ponte em Chamas">
+                        <div class="project-overlay"></div>
+                        <span class="project-category-badge">Web Experience</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">The Pit // Ponte de Combate</h3>
+                        <p class="project-description">
+                            Interface com cenários animados e iluminação dinâmica, explorando transições suaves de planos e efeitos climáticos diretamente no navegador.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3 Animations</span>
+                            <span class="tech-tag">Performance</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#home" class="btn-project primary">Ver Detalhes</a>
+                            <a href="https://github.com/jonas99kmn" target="_blank" rel="noopener noreferrer" class="btn-project outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO 2 -->
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="./mortalk/castelo.jpeg" alt="Outworld Castle Dashboard">
+                        <div class="project-overlay"></div>
+                        <span class="project-category-badge">Interface & UI</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Outworld Realm Dashboard</h3>
+                        <p class="project-description">
+                            Painel de controle com estética dark e vidro (Glassmorphism), filtros avançados, componentes responsivos e gráficos de monitoramento estilizados.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Glassmorphism</span>
+                            <span class="tech-tag">CSS Grid</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#home" class="btn-project primary">Ver Detalhes</a>
+                            <a href="https://github.com/jonas99kmn" target="_blank" rel="noopener noreferrer" class="btn-project outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO 3 -->
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="./mortalk/scorpion1.gif" alt="Scorpion Fire Stance">
+                        <div class="project-overlay"></div>
+                        <span class="project-category-badge">Canvas & Audio</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Scorpion Electric Border</h3>
+                        <p class="project-description">
+                            Efeito procedural de raio elétrico desenvolvido com Canvas 2D e cálculo de ruído octavado, acompanhado por sistema de áudio interativo.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tech-tag">Canvas 2D</span>
+                            <span class="tech-tag">Math Noise</span>
+                            <span class="tech-tag">Web Audio</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#home" class="btn-project primary">Ver Detalhes</a>
+                            <a href="https://github.com/jonas99kmn" target="_blank" rel="noopener noreferrer" class="btn-project outline">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             7. CONTATO // DESAFIE PARA UM KOMBAT
+        ================================================== -->
+        <section class="section-container" id="contato">
+            <div class="section-header">
+                <span class="section-badge">Conexão Direta</span>
+                <h2 class="section-title">Desafie para um <span>Kombat</span></h2>
+                <p class="section-description">
+                    Tem um projeto desafiador ou uma vaga de destaque? Envie uma mensagem e vamos conversar.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+                <!-- PAINEL INFORMATIVO -->
+                <div class="contact-info-panel">
+                    <div class="contact-highlight-card">
+                        <h3>Vamos construir algo lendário?</h3>
+                        <p>
+                            Estou aberto a oportunidades profissionais, trabalhos freelance e colaborações técnicas. Se você busca um desenvolvedor focado em entregar experiências visuais de alto padrão e código eficiente, estou pronto!
+                        </p>
+
+                        <div class="contact-methods">
+                            <a class="contact-method-item" href="https://www.linkedin.com/in/jonas-desenvolvedor-web-front-end/" target="_blank" rel="noopener noreferrer">
+                                <span class="contact-method-icon">💼</span>
+                                <div>
+                                    <strong>LinkedIn</strong>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">in/jonas-desenvolvedor-web-front-end</div>
+                                </div>
+                            </a>
+
+                            <a class="contact-method-item" href="https://github.com/jonas99kmn" target="_blank" rel="noopener noreferrer">
+                                <span class="contact-method-icon">💻</span>
+                                <div>
+                                    <strong>GitHub</strong>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">github.com/jonas99kmn</div>
+                                </div>
+                            </a>
+
+                            <a class="contact-method-item" href="https://www.instagram.com/jonasdesenvolvedorfrontend/" target="_blank" rel="noopener noreferrer">
+                                <span class="contact-method-icon">📸</span>
+                                <div>
+                                    <strong>Instagram</strong>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">@jonasdesenvolvedorfrontend</div>
+                                </div>
+                            </a>
+
+                            <div class="contact-method-item">
+                                <span class="contact-method-icon">📍</span>
+                                <div>
+                                    <strong>Localização</strong>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Senhor do Bonfim, Bahia - Brasil</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULÁRIO INTERATIVO -->
+                <div class="contact-form-panel">
+                    <form id="kombatContactForm">
+                        <div class="form-group">
+                            <label for="nome">Seu Nome / Empresa</label>
+                            <input class="form-input" type="text" id="nome" name="nome" placeholder="Ex: Raiden das Sombras" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Seu E-mail de Contato</label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="seu-email@dominio.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assunto">Assunto do Desafio</label>
+                            <input class="form-input" type="text" id="assunto" name="assunto" placeholder="Ex: Proposta de Projeto / Vaga Front-End" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-textarea" id="mensagem" name="mensagem" placeholder="Descreva sua proposta, projeto ou dúvida..." required></textarea>
+                        </div>
+
+                        <button class="btn-submit-form" type="submit">
+                            ⚔️ ENVIAR DESAFIO
+                        </button>
+
+                        <div class="form-success-message" id="formSuccessMsg"></div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER // RODAPÉ ÉPICO
+    ====================================================== -->
+    <footer class="footer-mk">
+        <div class="footer-content">
+            <div class="footer-dragon">
+                <img src="./mortalk/simbolo dragao.jpeg" alt="Dragão Mortal Kombat">
+            </div>
+
+            <nav class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#stats">Estatísticas</a>
+                <a href="#sobre">Sobre Mim</a>
+                <a href="#skills">Arsenal</a>
+                <a href="#kombatentes">Kombatentes</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <p class="footer-credits">
+                Desenvolvido por <span>Jonas Alves</span> &copy; 2026. Todos os direitos reservados.<br>
+                Inspirado no clássico Mortal Kombat com a potência do desenvolvimento Web moderno.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- BOTÃO FLUTUANTE DE RETORNO AO TOPO -->
+    <button class="btn-back-to-top" type="button" aria-label="Voltar ao início">
+        ↑
+    </button>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>

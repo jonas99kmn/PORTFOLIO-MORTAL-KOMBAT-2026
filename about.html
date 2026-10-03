@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim | Jonas Alves // Mortal Kombat Edition</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <!-- FUNDO ESTRELADO E LUZES -->
+    <div class="background-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+    <div class="ambient-lights"></div>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="index.html#top" class="cabecalho__brand">
+            <div class="brand-emblem">
+                <img src="./mortalk/simbolo dragao.jpeg" alt="Dragão Mortal Kombat">
+            </div>
+            <div class="brand-title">
+                JONAS<span>.DEV</span>
+            </div>
+        </a>
+
+        <nav class="cabecalho__nav">
+            <ul class="cabecalho__menu">
+                <li><a class="cabecalho__menu__link" href="index.html#home">Home</a></li>
+                <li><a class="cabecalho__menu__link" href="index.html#stats">Estatísticas</a></li>
+                <li><a class="cabecalho__menu__link active" href="about.html">Sobre Mim</a></li>
+                <li><a class="cabecalho__menu__link" href="index.html#skills">Arsenal</a></li>
+                <li><a class="cabecalho__menu__link" href="index.html#kombatentes">Kombatentes</a></li>
+                <li><a class="cabecalho__menu__link" href="index.html#projetos">Projetos</a></li>
+                <li><a class="cabecalho__menu__link" href="index.html#contato">Contato</a></li>
+            </ul>
+
+            <div class="cabecalho__actions">
+                <button class="btn-audio-toggle" type="button" aria-label="Alternar Som">
+                    <span>⚡</span> SFX ON
+                </button>
+                <button class="btn-mobile-toggle" type="button" aria-label="Abrir Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- SEÇÃO SOBRE MIM EXPANDIDA -->
+        <section class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Biografia & Filosofia</span>
+                <h1 class="section-title">Sobre <span>Jonas Alves</span></h1>
+                <p class="section-description">
+                    Desenvolvedor Front-End forjado na disciplina, estética visual marcante e paixão por desafios tecnológicos.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <p class="about-paragraph">
+                        Atualmente, resido em <strong>Senhor do Bonfim, na Bahia</strong>, onde construo diariamente projetos focados na excelência e inovação para a Web moderna.
+                    </p>
+                    <p class="about-paragraph">
+                        Possuo sólido domínio de <strong>HTML5, CSS3 e JavaScript moderno</strong>, desenvolvendo aplicações com código limpo, semântico, de alta performance e totalmente responsivo para todos os dispositivos.
+                    </p>
+                    <p class="about-paragraph">
+                        Tenho especial entusiasmo por micro-interações, efeitos visuais, computação gráfica via <strong>Canvas 2D</strong> e interfaces imersivas. O universo dos games de luta, especialmente o clássico <strong>Mortal Kombat</strong>, serve como inspiração constante para criar designs audaciosos e inesquecíveis.
+                    </p>
+                    <p class="about-paragraph">
+                        Estou sempre em busca de novos conhecimentos, explorando frameworks modernos, boas práticas de acessibilidade (a11y) e padrões de arquitetura para elevar cada projeto a um patamar lendário.
+                    </p>
+
+                    <!-- CONTROLE DE ÁUDIO -->
+                    <div class="about-audio-card">
+                        <div class="audio-header">
+                            <div class="audio-title">
+                                <span>🎙️</span> Efeito Clássico: Shao Kahn Sound Effect
+                            </div>
+                        </div>
+                        <div class="audio-controls-custom">
+                            <button class="btn-play-sfx" id="btnPlaySfx" type="button">▶️</button>
+                            <div class="audio-sound-wave">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">
+                                Invoque a voz do Imperador de Outworld!
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- REDES SOCIAIS & CONTATO -->
+                    <div style="margin-top: 24px;">
+                        <span style="display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px;">Conecte-se comigo:</span>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <a class="social-pill whatsapp-pill" href="https://wa.me/5574981217691?text=Ol%C3%A1%20Jonas,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" title="Conversar no WhatsApp: (74) 98121-7691">
+                                <img src="./assets/whatsapp.svg" alt="WhatsApp">
+                                WhatsApp
+                            </a>
+                            <a class="social-pill" href="https://github.com/jonas99kmn" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/github-32.png" alt="GitHub">
+                                GitHub
+                            </a>
+                            <a class="social-pill" href="https://www.linkedin.com/in/jonas-desenvolvedor-web-front-end/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/linkedin-30.png" alt="LinkedIn">
+                                LinkedIn
+                            </a>
+                            <a class="social-pill" href="https://www.instagram.com/jonasdesenvolvedorfrontend/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/instagram-30.png" alt="Instagram">
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual-card">
+                    <img class="bg-scenery" src="./mortalk/castelo.jpeg" alt="Arena Castelo">
+                    <div class="about-card-badge">
+                        <div class="dragon-logo-mini">
+                            <img src="./mortalk/simbolo dragao.jpeg" alt="Dragão MK">
+                        </div>
+                        <div class="about-badge-text">
+                            <h4>Arena do Guerreiro</h4>
+                            <p>Transformando linhas de código em vitórias impecáveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KOMBATENTES ROSTER -->
+        <section class="section-container" style="padding-top: 0;">
+            <div class="section-header">
+                <span class="section-badge">Os Mestres</span>
+                <h2 class="section-title">Guerreiros da <span>Arena</span></h2>
+            </div>
+
+            <div class="roster-grid">
+                <article class="roster-card" data-fighter="scorpion">
+                    <div class="roster-card-bg">
+                        <img class="roster-gif" src="./mortalk/scorpionkk.gif" alt="Scorpion">
+                    </div>
+                    <div class="roster-overlay"></div>
+                    <div class="roster-info">
+                        <span class="roster-role-badge">Impacto & Efeitos</span>
+                        <h3 class="roster-fighter-name">SCORPION <span>// FOGO</span></h3>
+                        <p class="roster-specialty">Animações de alto impacto, transições CSS e efeitos eletrizantes.</p>
+                        <button class="roster-action-btn" type="button">⚡ FATALITY</button>
+                    </div>
+                </article>
+
+                <article class="roster-card" data-fighter="subzero">
+                    <div class="roster-card-bg">
+                        <img class="roster-gif" src="./mortalk/sub-zero.gif" alt="Sub-Zero">
+                    </div>
+                    <div class="roster-overlay"></div>
+                    <div class="roster-info">
+                        <span class="roster-role-badge">Arquitetura</span>
+                        <h3 class="roster-fighter-name">SUB-ZERO <span>// GELO</span></h3>
+                        <p class="roster-specialty">Arquitetura sólida, modularidade e código inabalável.</p>
+                        <button class="roster-action-btn" type="button">❄️ ICE SHIELD</button>
+                    </div>
+                </article>
+
+                <article class="roster-card" data-fighter="kunglao">
+                    <div class="roster-card-bg">
+                        <img class="roster-gif" src="./mortalk/kung lao.gif" alt="Kung Lao">
+                    </div>
+                    <div class="roster-overlay"></div>
+                    <div class="roster-info">
+                        <span class="roster-role-badge">Velocidade</span>
+                        <h3 class="roster-fighter-name">KUNG LAO <span>// LÂMINA</span></h3>
+                        <p class="roster-specialty">Precisão cirúrgica em tempos de carregamento e FPS estável.</p>
+                        <button class="roster-action-btn" type="button">🌀 SPIN BLADE</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-mk">
+        <div class="footer-content">
+            <div class="footer-dragon">
+                <img src="./mortalk/simbolo dragao.jpeg" alt="Dragão MK">
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#stats">Estatísticas</a>
+                <a href="about.html">Sobre Mim</a>
+                <a href="index.html#skills">Arsenal</a>
+                <a href="index.html#kombatentes">Kombatentes</a>
+                <a href="index.html#projetos">Projetos</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+            <p class="footer-credits">
+                Desenvolvido por <span>Jonas Alves</span> &copy; 2026. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a class="btn-whatsapp-floating" href="https://wa.me/5574981217691?text=Ol%C3%A1%20Jonas,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp" title="Falar no WhatsApp: (74) 98121-7691">
+        <img src="./assets/whatsapp.svg" alt="WhatsApp">
+        <span class="whatsapp-tooltip">Falar no WhatsApp (74) 98121-7691</span>
+    </a>
+
+    <button class="btn-back-to-top" type="button" aria-label="Voltar ao início">↑</button>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
