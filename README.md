@@ -1,6 +1,9 @@
 # ⚡ LANDING PAGE // MORTAL KOMBAT 2026 EDITION
 
-Landing page e portfólio de alta fidelidade visual inspirado no modelo [PORTFOLIO-MTK-2026](https://github.com/jonas99kmn/PORTFOLIO-MTK-2026), desenvolvido com foco em desenvolvimento Web Front-End moderno, performance, design temático e rica interatividade.
+> 🌐 **Deploy Online (GitHub Pages):** [https://jonas99kmn.github.io/PORTFOLIO-MORTAL-KOMBAT-2026/](https://jonas99kmn.github.io/PORTFOLIO-MORTAL-KOMBAT-2026/)  
+> 💻 **Repositório Oficial:** [https://github.com/jonas99kmn/PORTFOLIO-MORTAL-KOMBAT-2026](https://github.com/jonas99kmn/PORTFOLIO-MORTAL-KOMBAT-2026)
+
+Landing page e portfólio de alta fidelidade visual desenvolvido com foco em desenvolvimento Web Front-End moderno, performance, design temático e rica interatividade.
 
 ---
 
