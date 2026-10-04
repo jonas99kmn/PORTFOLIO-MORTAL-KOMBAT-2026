@@ -567,6 +567,13 @@ main {
     box-shadow: 0 0 14px rgba(125, 249, 255, 0.35);
 }
 
+.social-pill.whatsapp-pill:hover {
+    border-color: #25D366;
+    color: #25D366;
+    background: rgba(37, 211, 102, 0.12);
+    box-shadow: 0 0 16px rgba(37, 211, 102, 0.4);
+}
+
 /* --------------------------------------------------------------------------
    6. O CARD 3D COM A BORDA ELÉTRICA (ORIGINAL APRIMORADO)
    -------------------------------------------------------------------------- */

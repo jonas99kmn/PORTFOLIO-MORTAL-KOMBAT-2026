@@ -417,18 +417,35 @@ document.addEventListener("DOMContentLoaded", () => {
        ---------------------------------------------------------------------- */
     const contactForm = document.getElementById("kombatContactForm");
     const successMsg = document.getElementById("formSuccessMsg");
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwvqYksIflfuozZO1ujG_96N7t6Uh9r3e1nMCVQg7NiU8vAZtoD-q-zn6jo29d7y7RIrw/exec";
 
     if (contactForm && successMsg) {
-        contactForm.addEventListener("submit", (e) => {
-            e.preventDefault();
+    contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const textoOriginal = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "⚔️ ENVIANDO...";
+
+        try {
+            await fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                body: new URLSearchParams(new FormData(contactForm))
+            });
+
             playAudioSafe(audioShaoKahn);
-            successMsg.style.display = "block";
             successMsg.textContent = "⚡ ROUND 1... MENSAGEM ENVIADA COM SUCESSO! FLAWLESS VICTORY!";
             contactForm.reset();
-
-            setTimeout(() => {
-                successMsg.style.display = "none";
-            }, 6000);
-        });
-    }
+        } catch (err) {
+            successMsg.textContent = "💀 FATALITY! Erro ao enviar. Tente novamente.";
+        } finally {
+            successMsg.style.display = "block";
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = textoOriginal;
+            setTimeout(() => (successMsg.style.display = "none"), 6000);
+        }
+    });
+}
 });
