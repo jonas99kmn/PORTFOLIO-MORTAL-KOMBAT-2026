@@ -170,7 +170,7 @@ body {
     justify-content: space-between;
     background: rgba(1, 7, 24, 0.85);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 2px solid var(--border-subtle);
     z-index: 1000;
     transition: var(--transition-normal);
 }
@@ -184,23 +184,46 @@ body {
 .cabecalho__brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 5px;
     text-decoration: none;
     color: var(--text-primary);
 }
-
+/* --------------------------------------------------------------------------
+   simbolo do mortal kombat 
+   -------------------------------------------------------------------------- */
 .brand-emblem {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    border: 2px solid var(--cor-neon);
+    border: 1px solid var(--cor-mk-red);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     background: rgba(125, 249, 255, 0.1);
-    box-shadow: 0 0 12px var(--cor-neon-glow);
+    box-shadow: 0 0 12px var(--cor-mk-red);
+
     overflow: hidden;
+
     transition: var(--transition-bounce);
+
+    animation: girarDragao3D 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes girarDragao3D {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 .brand-emblem img {
@@ -210,13 +233,13 @@ body {
 }
 
 .brand-title {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-family: var(--font-body);
+    font-size: 1.0rem;
+    font-weight: 700;
 }
 
 .brand-title span {
-    color: var(--cor-neon);
+    color: var(--cor-mk-red);
     text-shadow: 0 0 10px var(--cor-neon-glow);
 }
 
@@ -1047,14 +1070,34 @@ main {
     align-items: center;
     gap: 16px;
 }
-
+/* --------------------------------------------------------------------------
+   imagem do dragão animação
+   -------------------------------------------------------------------------- */
 .dragon-logo-mini {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 2px solid var(--cor-neon);
+    border: 2px solid var(--cor-mk-red);
     overflow: hidden;
     flex-shrink: 0;
+    box-shadow: 0 0 20px var(--cor-mk-red);
+    animation: girarDragao3D 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+
+@keyframes girarDragao3D {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 .dragon-logo-mini img {
@@ -1621,14 +1664,32 @@ main {
     text-align: center;
     gap: 24px;
 }
-
+/* --------------------------------------------------------------------------
+   simbolo do mortal kombat parte de baixo
+   -------------------------------------------------------------------------- */
 .footer-dragon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid var(--cor-neon);
+    border: 2px solid var(--cor-mk-red);
     overflow: hidden;
-    box-shadow: 0 0 20px var(--cor-neon-glow);
+    box-shadow: 0 0 20px var(--cor-mk-red);
+     animation: girarDragao3D 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes girarDragao3D {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 .footer-dragon img {
@@ -1662,7 +1723,7 @@ main {
 }
 
 .footer-credits span {
-    color: var(--cor-neon);
+    color: var(--cor-mk-red);
 }
 
 .btn-back-to-top {
