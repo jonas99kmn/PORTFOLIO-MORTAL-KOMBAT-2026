@@ -91,33 +91,7 @@ body {
     animation: animStar 60s linear infinite;
 }
 
-#stars2 {
-    width: 2.5px;
-    height: 2.5px;
-    background: transparent;
-    box-shadow: 
-        160px 260px var(--cor-neon), 420px 520px var(--cor-neon),
-        620px 120px var(--cor-neon), 920px 320px var(--cor-neon),
-        1220px 620px var(--cor-neon), 1470px 370px var(--cor-neon),
-        320px 780px var(--cor-neon), 850px 840px var(--cor-neon);
-    animation: animStar 100s linear infinite;
-}
 
-#stars3 {
-    width: 1.5px;
-    height: 1.5px;
-    background: transparent;
-    box-shadow: 
-        60px 420px #fff, 320px 720px #fff, 570px 270px #fff,
-        770px 470px #fff, 1070px 170px #fff, 1370px 720px #fff,
-        200px 950px #fff, 650px 980px #fff;
-    animation: animStar 140s linear infinite;
-}
-
-@keyframes animStar {
-    from { transform: translateY(0); }
-    to { transform: translateY(-1200px); }
-}
 
 .ambient-lights {
     position: fixed;
@@ -837,6 +811,135 @@ main {
     color: var(--text-muted);
     z-index: 10;
     pointer-events: none;
+}
+
+/* === CONTAINER DO CARROSSEL === */
+.hero-slider-container {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Altura — ajusta se quiser */
+  overflow: hidden;
+}
+
+.hero-slides {
+  width: 100%;
+  height: 100%;
+}
+
+/* === CADA SLIDE === */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Escondido por padrão */
+  visibility: hidden;
+  transition: opacity 0.6s ease;
+  padding: 2rem 5%;
+  display: flex;
+  align-items: center;
+}
+
+/* Slide ATIVO aparece */
+.hero-slide.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: #ff3d00;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-slide h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-slide p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+/* === BOTÕES DE NAVEGAÇÃO === */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente pra destacar */
+  border: none;
+  font-size: 65px; /* 🔼 Aumentei o tamanho */
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+  width: 70px; /* Tamanho do botão */
+  height: 70px;
+  border-radius: 50%; /* Deixa redondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0; /* Começa escondido */
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.hero-arrow.prev { 
+  left: 15px; 
+}
+.hero-arrow.next { 
+  right: 15px; 
+}
+
+/* Aparece quando passa o mouse no banner */
+.hero-slider-container:hover .hero-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Efeito ao passar o mouse em cima do botão */
+.hero-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1); /* Cresce um pouquinho */
+}
+
+/* === PONTINHOS INDICADORES === */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.hero-dot.ativo {
+  background: white;
+  box-shadow: 0 0 0 2px #ff3d00;
+}
+
+/* Responsivo — celular */
+@media (max-width: 768px) {
+  .hero-slider-container { height: 400px; }
+  .hero-slide h1 { font-size: 2rem; }
 }
 
 /* --------------------------------------------------------------------------
